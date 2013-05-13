@@ -1,12 +1,3 @@
-"""
-.. module:: tcprelay
-   :platform: Unix, Windows
-   :synopsis: Helps relay data between sockets
-
-.. moduleauthor:: Aniket Panse <contact@aniketpanse.in>
-
-"""
-
 import select
 import socket
 import sys
