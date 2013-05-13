@@ -14,6 +14,7 @@ Contents:
    :maxdepth: 2
 
    code
+   README
     
 Indices and tables
 ==================
