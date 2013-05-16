@@ -55,8 +55,8 @@ class Writer(object):
 
     def push_data(self, data):
         """ Sends data over the socket object.
-        
-            :param data: The string to be sent. 
+
+            :param data: The string to be sent.
         """
         self.sock.sendall(data)
 
@@ -75,14 +75,14 @@ if __name__ == '__main__':
     else:
         print 'Usage: %s [port number]' % sys.argv[0]
         sys.exit(0)
-    
+
     s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     try:
         s.bind((host, port))
     except Exception as e:
         print 'Bind failed, exiting'
         sys.exit(1)
-        
+
     s.listen(2)
 
     try:
