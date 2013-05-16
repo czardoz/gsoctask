@@ -58,7 +58,7 @@ class Writer(object):
         
             :param data: The string to be sent. 
         """
-        self.sock.send(data)
+        self.sock.sendall(data)
 
 if __name__ == '__main__':
 
