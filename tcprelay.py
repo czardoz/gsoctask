@@ -5,6 +5,8 @@ import sys
 
 def relay(isock, osock, mapdict):
     """ Custom IO Loop which relays data between two sockets.
+
+        :param mapdict: a dict which maps sockets to Reader/Writer objects.
         :param isock: The socket to read data from.
         :param osock: The socket to write the data to.
     """
