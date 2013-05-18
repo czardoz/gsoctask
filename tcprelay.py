@@ -19,10 +19,14 @@ def relay(isock, osock, mapdict):
             writer = mapdict[w[0]]
             data = reader.pull_data()
             if not data:
+                # The read socket has probably closed the connection, so we should quit
+                osock.close()
                 break
             try:
                 writer.push_data(data)
             except socket.error as e:
+                # Writing socket has closed now, so again quit.
+                isock.close()
                 break
 
 
